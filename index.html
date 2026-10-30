@@ -15,7 +15,7 @@
     *{box-sizing:border-box}html,body{height:100%;margin:0}body{overflow:hidden;background:var(--surface2);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
     button,input,select,textarea{font:inherit}button{cursor:pointer}.hidden{display:none!important}
     .app{display:flex;height:100dvh;min-height:100vh}.sidebar{position:relative;z-index:40;display:flex;flex:0 0 var(--sidebar-w);width:var(--sidebar-w);height:100%;flex-direction:column;background:linear-gradient(180deg,var(--sidebar),var(--sidebar2));color:#fff;box-shadow:8px 0 32px rgba(15,23,42,.09)}
-    .brand{display:flex;align-items:center;gap:12px;padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1)}.brand-mark{display:grid;width:44px;height:44px;place-items:center;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(20,184,166,.18);color:#5eead4;font-weight:800}.brand h1{margin:0;font-size:17px}.brand p{margin:2px 0 0;color:#94a3b8;font-size:12px}
+    .brand{display:flex;align-items:center;gap:12px;padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1)}.brand-mark{display:grid;width:44px;height:44px;flex:0 0 44px;place-items:center;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(20,184,166,.18);color:#5eead4;font-weight:800}.brand>div:last-child{min-width:0}.brand h1{margin:0;font-size:16px;line-height:1.3}.brand p{margin:2px 0 0;color:#94a3b8;font-size:12px}
     .nav{flex:1;min-height:0;overflow:auto;padding:16px 12px}.nav-title{padding:0 10px 8px;color:#64748b;font-size:11px;font-weight:700;letter-spacing:.12em}.tool-row{position:relative;margin:4px 0}.tool-btn{display:flex;width:100%;align-items:center;gap:12px;margin:0;padding:12px 42px 12px 12px;border:1px solid transparent;border-radius:14px;background:transparent;color:#cbd5e1;text-align:left;transition:.16s}.tool-btn:hover{background:rgba(255,255,255,.07);color:#fff}.tool-btn.active{border-color:rgba(94,234,212,.24);background:rgba(13,148,136,.22);color:#fff;box-shadow:inset 3px 0 #2dd4bf}.tool-icon{display:grid;width:38px;height:38px;flex:0 0 38px;place-items:center;border-radius:11px;background:rgba(255,255,255,.08);font-size:19px}.tool-copy{min-width:0}.tool-name{display:block;overflow:hidden;font-weight:700;text-overflow:ellipsis;white-space:nowrap}.tool-desc{display:block;overflow:hidden;color:#94a3b8;font-size:11px;text-overflow:ellipsis;white-space:nowrap}.remove-tool{position:absolute;top:50%;right:10px;z-index:2;width:30px;height:30px;transform:translateY(-50%);border:0;border-radius:8px;background:transparent;color:#94a3b8;font-size:18px;opacity:0}.tool-row:hover .remove-tool,.remove-tool:focus-visible{opacity:1}.remove-tool:hover{color:#fca5a5}
     .sidebar-foot{padding:14px 12px calc(14px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.1)}.add-btn{display:flex;width:100%;align-items:center;justify-content:center;gap:8px;padding:11px;border:1px dashed #475569;border-radius:13px;background:rgba(255,255,255,.02);color:#cbd5e1;font-weight:700}.add-btn:hover{border-color:#5eead4;background:rgba(20,184,166,.1);color:#fff}
     .main{display:flex;min-width:0;flex:1;flex-direction:column}.topbar{position:relative;z-index:20;display:flex;height:var(--header-h);flex:0 0 var(--header-h);align-items:center;gap:12px;padding:0 18px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(16px)}.menu-btn{display:none;width:40px;height:40px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#334155;font-size:20px}.page-title{min-width:0;font-weight:800}.page-subtitle{overflow:hidden;color:var(--muted);font-size:12px;text-overflow:ellipsis;white-space:nowrap}.top-actions{display:flex;align-items:center;gap:8px;margin-left:auto}.icon-btn,.open-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:0 12px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#334155;text-decoration:none}.icon-btn:hover,.open-btn:hover{border-color:#94a3b8;background:#f8fafc}
@@ -23,18 +23,19 @@
     .frame-wrap{position:absolute;inset:0;background:#fff}.frame{display:block;width:100%;height:100%;border:0;background:#fff}.loader{position:absolute;inset:0;z-index:3;display:grid;place-items:center;background:#fff}.spinner{width:44px;height:44px;margin:0 auto 12px;border:4px solid #dbeafe;border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}.loader-text{text-align:center;color:var(--muted)}@keyframes spin{to{transform:rotate(360deg)}}
     .frame-notice{position:absolute;right:16px;bottom:16px;z-index:4;max-width:min(420px,calc(100% - 32px));padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.96);box-shadow:var(--shadow);font-size:12px}.frame-notice a{color:var(--accent);font-weight:800}.mask{position:fixed;inset:0;z-index:30;background:rgba(2,6,23,.58);backdrop-filter:blur(3px)}
     .modal-layer{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgba(2,6,23,.62);backdrop-filter:blur(5px)}.modal{width:min(560px,100%);max-height:calc(100dvh - 32px);overflow:auto;border-radius:22px;background:#fff;box-shadow:0 30px 90px rgba(2,6,23,.35)}.modal-head{display:flex;align-items:center;padding:20px 22px 14px}.modal-head h2{margin:0;font-size:20px}.modal-close{margin-left:auto;width:38px;height:38px;border:0;border-radius:10px;background:#f1f5f9;color:#475569;font-size:21px}.form{padding:0 22px 22px}.field{display:grid;gap:7px;margin:14px 0}.field label{font-size:13px;font-weight:800}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:11px;background:#fff;color:#0f172a;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#14b8a6;box-shadow:0 0 0 3px rgba(20,184,166,.14)}.field small{color:var(--muted)}.form-error{min-height:22px;color:var(--danger);font-size:13px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.btn{padding:10px 16px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#334155;font-weight:800}.btn.primary{border-color:var(--accent);background:var(--accent);color:#fff}.btn:hover{filter:brightness(.98)}
-    .nav-title.dev{margin-top:18px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.14);color:#fbbf24}.nav-empty{padding:6px 12px;color:#64748b;font-size:12px}
-    .dev-section{margin-top:40px;padding:20px;border:1px dashed #f59e0b;border-radius:20px;background:rgba(245,158,11,.05)}.dev-section h3{margin:0;color:#b45309;font-size:18px}.dev-section>p{margin:4px 0 0;color:var(--muted);font-size:13px}.dev-section .cards{margin-top:16px}.welcome-card.dev{border-style:dashed}.welcome-card.dev .tool-icon{background:#fef3c7}.welcome-card.dev .launch{color:#b45309}.dev-empty{margin:14px 0 0;color:var(--muted);font-size:13px}
+    .nav-title.dev,.nav-title.test{margin-top:18px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.14)}.nav-title.dev{color:#fbbf24}.nav-title.test{color:#38bdf8}.nav-empty{padding:6px 12px;color:#64748b;font-size:12px}
+    .dev-section,.test-section{margin-top:40px;padding:20px;border:1px dashed #f59e0b;border-radius:20px;background:rgba(245,158,11,.05)}.dev-section h3{margin:0;color:#b45309;font-size:18px}.dev-section>p,.test-section>p{margin:4px 0 0;color:var(--muted);font-size:13px}.dev-section .cards,.test-section .cards{margin-top:16px}.welcome-card.dev,.welcome-card.test{border-style:dashed}.welcome-card.dev .tool-icon{background:#fef3c7}.welcome-card.dev .launch{color:#b45309}.dev-empty,.test-empty{margin:14px 0 0;color:var(--muted);font-size:13px}
+    .test-section{border-color:#0284c7;background:rgba(2,132,199,.05)}.test-section h3{margin:0;color:#0369a1;font-size:18px}.welcome-card.test .tool-icon{background:#e0f2fe}.welcome-card.test .launch{color:#0369a1}
     .toast{position:fixed;right:18px;bottom:18px;z-index:100;max-width:min(400px,calc(100% - 36px));padding:12px 15px;border-radius:12px;background:#0f172a;color:#fff;box-shadow:var(--shadow);font-size:13px}
     @media(max-width:900px){.cards{grid-template-columns:1fr}.welcome-card p{min-height:0}}
     @media(max-width:767px){.sidebar{position:fixed;inset:0 auto 0 0;width:min(86vw,var(--sidebar-w));transform:translateX(-105%);transition:transform .22s ease;pointer-events:none}.sidebar.open{transform:translateX(0);pointer-events:auto}.menu-btn{display:inline-grid;place-items:center}.topbar{height:58px;flex-basis:58px;padding:0 12px}.page-subtitle{display:none}.open-btn span{display:none}.welcome{padding:24px 16px}.hero h2{font-size:34px}.cards{margin-top:26px}.frame-notice{right:10px;bottom:10px}.modal-layer{align-items:end;padding:0}.modal{width:100%;max-height:92dvh;border-radius:22px 22px 0 0}}
-    @media(prefers-color-scheme:dark){.dev-section h3{color:#fbbf24}.welcome-card.dev .tool-icon{background:rgba(251,191,36,.15)}.welcome-card.dev .launch{color:#fbbf24}:root{--surface:#111827;--surface2:#020617;--text:#e5e7eb;--muted:#94a3b8;--line:#273449}.topbar,.loader,.frame{background:#0b1220}.topbar{background:rgba(11,18,32,.94)}.menu-btn,.icon-btn,.open-btn,.welcome-card{background:#111827;color:#e5e7eb}.modal{background:#111827}.field input,.field select,.field textarea{border-color:#334155;background:#0f172a;color:#e5e7eb}.btn{border-color:#334155;background:#1e293b;color:#e5e7eb}.frame-notice{background:rgba(15,23,42,.96)}}
+    @media(prefers-color-scheme:dark){.dev-section h3{color:#fbbf24}.test-section h3{color:#38bdf8}.welcome-card.dev .tool-icon{background:rgba(251,191,36,.15)}.welcome-card.test .tool-icon{background:rgba(56,189,248,.15)}.welcome-card.dev .launch{color:#fbbf24}.welcome-card.test .launch{color:#38bdf8}:root{--surface:#111827;--surface2:#020617;--text:#e5e7eb;--muted:#94a3b8;--line:#273449}.topbar,.loader,.frame{background:#0b1220}.topbar{background:rgba(11,18,32,.94)}.menu-btn,.icon-btn,.open-btn,.welcome-card{background:#111827;color:#e5e7eb}.modal{background:#111827}.field input,.field select,.field textarea{border-color:#334155;background:#0f172a;color:#e5e7eb}.btn{border-color:#334155;background:#1e293b;color:#e5e7eb}.frame-notice{background:rgba(15,23,42,.96)}}
   </style>
 </head>
 <body>
   <div class="app">
     <aside id="sidebar" class="sidebar" aria-label="工具導覽">
-      <div class="brand"><div class="brand-mark">IW</div><div><h1>Stantec 工作輔助助理</h1><p>個人綜合工作看板</p></div></div>
+      <div class="brand"><div class="brand-mark">IW</div><div><h1>Stantec 私人工作輔助助理</h1><p>個人綜合工作看板</p></div></div>
       <nav id="toolNav" class="nav" aria-label="工具清單"></nav>
       <div class="sidebar-foot"><button id="addToolBtn" class="add-btn" type="button"><span aria-hidden="true">＋</span>新增工具</button></div>
     </aside>
@@ -50,7 +51,9 @@
         </div>
       </header>
       <section id="workspace" class="workspace">
-        <div id="welcome" class="welcome"><div class="hero"><div class="eyebrow">WORKSPACE</div><h2>把常用工具集中在同一個工作介面。</h2><p>從左側或下方卡片開啟工具。新增的工具只保存在目前瀏覽器的 localStorage，不會上傳。</p><div id="welcomeCards" class="cards"></div><section class="dev-section" aria-labelledby="devTitle"><h3 id="devTitle">🚧 開發中（尚未完成）</h3><p>以下工具仍在開發中，功能可能不完整或隨時調整，請勿用於正式成果。</p><div id="devCards" class="cards"></div><p id="devEmpty" class="dev-empty hidden">目前沒有開發中的工具。</p></section></div></div>
+        <div id="welcome" class="welcome"><div class="hero"><div class="eyebrow">WORKSPACE</div><h2>把常用工具集中在同一個工作介面。</h2><p>從左側或下方卡片開啟工具。新增的工具只保存在目前瀏覽器的 localStorage，不會上傳。</p><div id="welcomeCards" class="cards"></div>
+          <section class="test-section" aria-labelledby="testTitle"><h3 id="testTitle">🧪 待測試（開發完成，尚未實際數據驗證）</h3><p>以下工具已開發完成，但尚未使用實際數據進行測試驗證，計算或輸出結果請自行再確認，勿直接用於正式成果。</p><div id="testCards" class="cards"></div><p id="testEmpty" class="test-empty hidden">目前沒有待測試的工具。</p></section>
+          <section class="dev-section" aria-labelledby="devTitle"><h3 id="devTitle">🚧 開發中（尚未完成）</h3><p>以下工具仍在開發中，功能可能不完整或隨時調整，請勿用於正式成果。</p><div id="devCards" class="cards"></div><p id="devEmpty" class="dev-empty hidden">目前沒有開發中的工具。</p></section></div></div>
         <div id="frameWrap" class="frame-wrap hidden">
           <div id="loader" class="loader"><div><div class="spinner"></div><div class="loader-text">正在載入工具…</div></div></div>
           <iframe id="toolFrame" class="frame" title="工具工作區" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-read; clipboard-write; microphone; camera; fullscreen"></iframe>
@@ -59,7 +62,6 @@
       </section>
     </main>
   </div>
-
   <div id="addModal" class="modal-layer hidden" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
     <div class="modal">
       <div class="modal-head"><h2 id="addModalTitle">新增工具</h2><button id="modalCloseBtn" class="modal-close" type="button" aria-label="關閉">×</button></div>
@@ -68,39 +70,42 @@
         <div class="field"><label for="toolUrl">工具網址 *</label><input id="toolUrl" name="url" type="url" required placeholder="https://example.com/" inputmode="url" autocomplete="url"><small>僅接受 http 或 https 網址。</small></div>
         <div class="field"><label for="toolDescription">功能簡述</label><textarea id="toolDescription" name="description" rows="3" maxlength="120" placeholder="簡短說明此工具的用途"></textarea></div>
         <div class="field"><label for="toolIcon">圖示</label><select id="toolIcon" name="icon"><option value="🔧">🔧 工具</option><option value="📊">📊 報表</option><option value="📁">📁 文件</option><option value="🌐">🌐 網站</option><option value="🧭">🧭 導覽</option><option value="⚙️">⚙️ 設定</option></select></div>
-        <div class="field"><label for="toolStage">放置區域</label><select id="toolStage" name="stage"><option value="ready">工具（可使用）</option><option value="dev">開發中（尚未完成）</option></select></div>
+        <div class="field"><label for="toolStage">放置區域</label><select id="toolStage" name="stage"><option value="ready">工具（可使用）</option><option value="testing">待測試（開發完成，尚未實際數據驗證）</option><option value="dev">開發中（尚未完成）</option></select></div>
         <div id="formError" class="form-error" role="alert"></div>
         <div class="modal-actions"><button id="cancelBtn" class="btn" type="button">取消</button><button class="btn primary" type="submit">新增並開啟</button></div>
       </form>
     </div>
   </div>
   <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
-
   <script>
   (() => {
     'use strict';
     const BUILTIN_TOOLS = [
       {id:'postal',name:'郵遞區號工具',url:'https://ir-stan.github.io/3-3/',description:'台灣地址 3+3 碼郵遞區號查詢與批次檢核。',icon:'📮',builtin:true},
       {id:'voice',name:'語音轉文字（逐字稿）',url:'https://ir-stan.github.io/voice-to-word/',description:'AI 語音轉文字逐字稿與會議記錄產出。',icon:'🎙️',builtin:true},
-      {id:'isco',name:'ISCO 灌注設計工具',url:'https://ir-stan.github.io/isco-tool/',description:'現地化學氧化灌注設計與計算工具。',icon:'🧪',builtin:true},
+      {id:'isco',name:'ISCO 灌注設計工具',url:'https://ir-stan.github.io/isco-tool/',description:'現地化學氧化灌注設計與計算工具。',icon:'🧪',stage:'testing',builtin:true},
       {id:'project-support',name:'Project Support',url:'https://ir-stan.github.io/project-support/',description:'開發中（尚未完成）',icon:'🚧',stage:'dev',builtin:true}
     ];
     const STORAGE_KEY = 'work-dashboard-custom-tools-v1';
+    const STAGE_LABEL = {testing:'待測試（尚未經實際數據驗證）',dev:'開發中（尚未完成）'};
     const $ = id => document.getElementById(id);
-    const els = {sidebar:$('sidebar'),mask:$('drawerMask'),menu:$('menuBtn'),nav:$('toolNav'),add:$('addToolBtn'),welcome:$('welcome'),cards:$('welcomeCards'),devCards:$('devCards'),devEmpty:$('devEmpty'),stage:$('toolStage'),frameWrap:$('frameWrap'),frame:$('toolFrame'),loader:$('loader'),notice:$('frameNotice'),noticeExternal:$('noticeExternal'),title:$('pageTitle'),subtitle:$('pageSubtitle'),home:$('homeBtn'),reload:$('reloadBtn'),external:$('openExternalBtn'),modal:$('addModal'),modalClose:$('modalCloseBtn'),cancel:$('cancelBtn'),form:$('toolForm'),formError:$('formError'),name:$('toolName'),url:$('toolUrl'),description:$('toolDescription'),icon:$('toolIcon'),toast:$('toast')};
+    const els = {sidebar:$('sidebar'),mask:$('drawerMask'),menu:$('menuBtn'),nav:$('toolNav'),add:$('addToolBtn'),welcome:$('welcome'),cards:$('welcomeCards'),testCards:$('testCards'),testEmpty:$('testEmpty'),devCards:$('devCards'),devEmpty:$('devEmpty'),stage:$('toolStage'),frameWrap:$('frameWrap'),frame:$('toolFrame'),loader:$('loader'),notice:$('frameNotice'),noticeExternal:$('noticeExternal'),title:$('pageTitle'),subtitle:$('pageSubtitle'),home:$('homeBtn'),reload:$('reloadBtn'),external:$('openExternalBtn'),modal:$('addModal'),modalClose:$('modalCloseBtn'),cancel:$('cancelBtn'),form:$('toolForm'),formError:$('formError'),name:$('toolName'),url:$('toolUrl'),description:$('toolDescription'),icon:$('toolIcon'),toast:$('toast')};
     let tools = [...BUILTIN_TOOLS, ...loadCustomTools()];
     let activeId = null;
     let loadTimer = null;
     let toastTimer = null;
     let lastFocused = null;
-
-    function loadCustomTools(){try{const raw=localStorage.getItem(STORAGE_KEY);const value=raw?JSON.parse(raw):[];return Array.isArray(value)?value.filter(t=>t&&typeof t.id==='string'&&typeof t.name==='string'&&isSafeUrl(t.url)).map(t=>({...t,stage:t.stage==='dev'?'dev':'ready',builtin:false})):[]}catch(error){console.warn('無法讀取自訂工具',error);return []}}
+    function normalizeStage(value){return value==='dev'||value==='testing'?value:'ready'}
+    function loadCustomTools(){try{const raw=localStorage.getItem(STORAGE_KEY);const value=raw?JSON.parse(raw):[];return Array.isArray(value)?value.filter(t=>t&&typeof t.id==='string'&&typeof t.name==='string'&&isSafeUrl(t.url)).map(t=>({...t,stage:normalizeStage(t.stage),builtin:false})):[]}catch(error){console.warn('無法讀取自訂工具',error);return []}}
     function saveCustomTools(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(tools.filter(t=>!t.builtin)))}catch(error){showToast('無法儲存工具：瀏覽器可能禁止 localStorage。')}}
     function isSafeUrl(value){try{const u=new URL(value);return u.protocol==='https:'||u.protocol==='http:'}catch{return false}}
     function escapeHtml(value){return String(value).replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]))}
     function showToast(message){clearTimeout(toastTimer);els.toast.textContent=message;els.toast.classList.remove('hidden');toastTimer=setTimeout(()=>els.toast.classList.add('hidden'),2800)}
-    function isDev(tool){return tool.stage==='dev'}
-    function navTitle(text,dev){const t=document.createElement('div');t.className='nav-title'+(dev?' dev':'');t.textContent=text;return t}
+    function stageOf(tool){return normalizeStage(tool.stage)}
+    function isDev(tool){return stageOf(tool)==='dev'}
+    function isTesting(tool){return stageOf(tool)==='testing'}
+    function navTitle(text,kind){const t=document.createElement('div');t.className='nav-title'+(kind?' '+kind:'');t.textContent=text;return t}
+    function navEmpty(){const e=document.createElement('div');e.className='nav-empty';e.textContent='目前沒有';return e}
     function buildRow(tool){
       const row=document.createElement('div');row.className='tool-row';
       const button=document.createElement('button');button.type='button';button.className='tool-btn'+(tool.id===activeId?' active':'');button.dataset.id=tool.id;button.setAttribute('aria-pressed',String(tool.id===activeId));
@@ -110,21 +115,28 @@
       return row;
     }
     function buildCard(tool){
-      const card=document.createElement('button');card.type='button';card.className='welcome-card'+(isDev(tool)?' dev':'');card.dataset.id=tool.id;
-      card.innerHTML=`<span class="tool-icon" aria-hidden="true">${escapeHtml(tool.icon||'🔧')}</span><h3>${escapeHtml(tool.name)}</h3><p>${escapeHtml(tool.description||'')}</p><span class="launch">${isDev(tool)?'預覽開發中版本 →':'開啟工具 →'}</span>`;
+      const stage=stageOf(tool);
+      const card=document.createElement('button');card.type='button';card.className='welcome-card'+(stage==='dev'?' dev':stage==='testing'?' test':'');card.dataset.id=tool.id;
+      const launch=stage==='dev'?'預覽開發中版本 →':stage==='testing'?'開啟待測試版本 →':'開啟工具 →';
+      card.innerHTML=`<span class="tool-icon" aria-hidden="true">${escapeHtml(tool.icon||'🔧')}</span><h3>${escapeHtml(tool.name)}</h3><p>${escapeHtml(tool.description||'')}</p><span class="launch">${launch}</span>`;
       card.addEventListener('click',()=>openTool(tool.id));return card;
     }
     function render(){
-      const ready=tools.filter(t=>!isDev(t)),dev=tools.filter(isDev);
-      els.nav.replaceChildren();els.cards.replaceChildren();els.devCards.replaceChildren();
-      els.nav.append(navTitle('TOOLS',false));ready.forEach(t=>{els.nav.append(buildRow(t));els.cards.append(buildCard(t))});
-      els.nav.append(navTitle('開發中（尚未完成）',true));
-      if(dev.length){dev.forEach(t=>{els.nav.append(buildRow(t));els.devCards.append(buildCard(t))})}else{const e=document.createElement('div');e.className='nav-empty';e.textContent='目前沒有';els.nav.append(e)}
+      const ready=tools.filter(t=>stageOf(t)==='ready'),testing=tools.filter(isTesting),dev=tools.filter(isDev);
+      els.nav.replaceChildren();els.cards.replaceChildren();els.testCards.replaceChildren();els.devCards.replaceChildren();
+      els.nav.append(navTitle('TOOLS',''));ready.forEach(t=>{els.nav.append(buildRow(t));els.cards.append(buildCard(t))});
+      els.nav.append(navTitle('待測試（開發完成，尚未實際數據驗證）','test'));
+      if(testing.length){testing.forEach(t=>{els.nav.append(buildRow(t));els.testCards.append(buildCard(t))})}else{els.nav.append(navEmpty())}
+      els.testEmpty.classList.toggle('hidden',testing.length>0);
+      els.nav.append(navTitle('開發中（尚未完成）','dev'));
+      if(dev.length){dev.forEach(t=>{els.nav.append(buildRow(t));els.devCards.append(buildCard(t))})}else{els.nav.append(navEmpty())}
       els.devEmpty.classList.toggle('hidden',dev.length>0);
     }
     function openTool(id){
       const tool=tools.find(item=>item.id===id);if(!tool)return;
-      activeId=id;render();closeDrawer();els.welcome.classList.add('hidden');els.frameWrap.classList.remove('hidden');els.loader.classList.remove('hidden');els.notice.classList.add('hidden');els.title.textContent=tool.name;els.subtitle.textContent=(isDev(tool)?'【開發中（尚未完成）】':'')+(tool.description&&tool.description!=='開發中（尚未完成）'?tool.description:tool.url);els.external.href=tool.url;els.noticeExternal.href=tool.url;els.external.classList.remove('hidden');els.reload.classList.remove('hidden');
+      activeId=id;render();closeDrawer();els.welcome.classList.add('hidden');els.frameWrap.classList.remove('hidden');els.loader.classList.remove('hidden');els.notice.classList.add('hidden');els.title.textContent=tool.name;
+      const label=STAGE_LABEL[stageOf(tool)];
+      els.subtitle.textContent=(label?'【'+label+'】':'')+(tool.description&&tool.description!=='開發中（尚未完成）'?tool.description:tool.url);els.external.href=tool.url;els.noticeExternal.href=tool.url;els.external.classList.remove('hidden');els.reload.classList.remove('hidden');
       clearTimeout(loadTimer);els.frame.onload=()=>{clearTimeout(loadTimer);els.loader.classList.add('hidden');};els.frame.src='about:blank';requestAnimationFrame(()=>{els.frame.src=tool.url});loadTimer=setTimeout(()=>{els.loader.classList.add('hidden');els.notice.classList.remove('hidden')},9000);
       try{history.replaceState(null,'','#tool='+encodeURIComponent(id))}catch{}
     }
@@ -134,9 +146,8 @@
     function closeDrawer(){els.sidebar.classList.remove('open');els.mask.classList.add('hidden');els.mask.setAttribute('aria-hidden','true');els.menu.setAttribute('aria-expanded','false');document.body.style.overflow=''}
     function openModal(){lastFocused=document.activeElement;els.form.reset();els.formError.textContent='';els.modal.classList.remove('hidden');document.body.style.overflow='hidden';setTimeout(()=>els.name.focus(),0)}
     function closeModal(){els.modal.classList.add('hidden');document.body.style.overflow='';if(lastFocused&&typeof lastFocused.focus==='function')lastFocused.focus()}
-    function addTool(event){event.preventDefault();const name=els.name.value.trim(),url=els.url.value.trim(),description=els.description.value.trim(),icon=els.icon.value,stage=els.stage.value==='dev'?'dev':'ready';if(!name){els.formError.textContent='請輸入工具名稱。';els.name.focus();return}if(!isSafeUrl(url)){els.formError.textContent='請輸入有效的 http 或 https 網址。';els.url.focus();return}if(tools.some(t=>t.url.replace(/\/$/,'')===url.replace(/\/$/,''))){els.formError.textContent='此網址已在工具清單中。';els.url.focus();return}const tool={id:'custom-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7),name,url:new URL(url).href,description,icon,stage,builtin:false};tools.push(tool);saveCustomTools();closeModal();render();openTool(tool.id);showToast('已新增工具。')}
+    function addTool(event){event.preventDefault();const name=els.name.value.trim(),url=els.url.value.trim(),description=els.description.value.trim(),icon=els.icon.value,stage=normalizeStage(els.stage.value);if(!name){els.formError.textContent='請輸入工具名稱。';els.name.focus();return}if(!isSafeUrl(url)){els.formError.textContent='請輸入有效的 http 或 https 網址。';els.url.focus();return}if(tools.some(t=>t.url.replace(/\/$/,'')===url.replace(/\/$/,''))){els.formError.textContent='此網址已在工具清單中。';els.url.focus();return}const tool={id:'custom-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7),name,url:new URL(url).href,description,icon,stage,builtin:false};tools.push(tool);saveCustomTools();closeModal();render();openTool(tool.id);showToast('已新增工具。')}
     function removeTool(id){const tool=tools.find(t=>t.id===id&&!t.builtin);if(!tool)return;if(!confirm(`要移除「${tool.name}」嗎？`))return;tools=tools.filter(t=>t.id!==id);saveCustomTools();if(activeId===id)showHome();else render();showToast('已移除工具。')}
-
     els.menu.addEventListener('click',()=>els.sidebar.classList.contains('open')?closeDrawer():openDrawer());els.mask.addEventListener('click',closeDrawer);els.home.addEventListener('click',showHome);els.reload.addEventListener('click',reloadActive);els.add.addEventListener('click',openModal);els.modalClose.addEventListener('click',closeModal);els.cancel.addEventListener('click',closeModal);els.form.addEventListener('submit',addTool);
     els.modal.addEventListener('click',event=>{if(event.target===els.modal)closeModal()});els.nav.addEventListener('click',event=>{const remove=event.target.closest('[data-remove-id]');if(remove){event.stopPropagation();removeTool(remove.dataset.removeId)}});
     document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(!els.modal.classList.contains('hidden'))closeModal();else closeDrawer()}if(event.key==='Tab'&&!els.modal.classList.contains('hidden')){const focusable=[...els.modal.querySelectorAll('button,input,select,textarea')].filter(el=>!el.disabled);const first=focusable[0],last=focusable[focusable.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}});
